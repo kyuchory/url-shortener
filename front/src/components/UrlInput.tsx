@@ -19,16 +19,24 @@ const UrlInput: React.FC = () => {
   };
 
   const handleSendUrl = async () => {
-    if (isValidUrl(url)) {
+    const normalizedUrl = normalizeUrl(url);
+    if (isValidUrl(normalizedUrl)) {
       try {
-        const data = await shortenUrl(url);
-        dispatch(setShortenedUrl(data));
+        const data = await shortenUrl(normalizedUrl);
+        dispatch(setShortenedUrl(`${data.shortUrl}`));
       } catch (error) {
         alert(error);
       }
     } else {
       alert("url 형식이 아님.");
     }
+  };
+
+  const normalizeUrl = (url: string) => {
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      return `https://${url}`;
+    }
+    return url;
   };
 
   return (
