@@ -1,4 +1,3 @@
-//test
 import "./App.css";
 import Homepage from "./pages/Hompage";
 import Header from "./components/Header";
