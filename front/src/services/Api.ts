@@ -15,7 +15,7 @@ export const shortenUrl = async (url: string) => {
   }
 };
 
-//url 리디렉션 요청
+//url 리디렉션 요청 Cors 문제때문에 사용 안함
 export const redirectToUrl = async (shortUrl: string) => {
   try {
     const response = await api.get(`/${shortUrl}`);
