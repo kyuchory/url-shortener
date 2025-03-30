@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { shortenUrl } from "../services/Api";
 import { useDispatch } from "react-redux";
 import { setShortenedUrl } from "../redux/urlSlice";
+import styles from "../styles/UrlInput.module.css";
 
 //일단 완성후에,
 const UrlInput: React.FC = () => {
@@ -40,16 +41,19 @@ const UrlInput: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={styles.urlInputWrapper}>
       <input
         type="text"
         value={url}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
           setUrl(event.target.value)
         }
-        placeholder="Url 을 입력하세요."
+        placeholder="URL을 입력하세요."
+        className={styles.urlInput}
       />
-      <button onClick={handleSendUrl}>변환</button>
+      <button onClick={handleSendUrl} className={styles.transButton}>
+        변환
+      </button>
     </div>
   );
 };
