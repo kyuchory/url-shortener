@@ -20,8 +20,12 @@ const urlSlice = createSlice({
     setShortenedUrl: (state, action: PayloadAction<string>) => {
       state.shortenedUrl = action.payload;
     },
+    clearShortenedUrl(state) {
+      state.shortenedUrl = "";
+    },
   },
 });
 
-export const { setOriginalUrl, setShortenedUrl } = urlSlice.actions;
+export const { setOriginalUrl, setShortenedUrl, clearShortenedUrl } =
+  urlSlice.actions;
 export default urlSlice.reducer;
