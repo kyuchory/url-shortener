@@ -29,5 +29,5 @@ exports.redirectUrl = (req, res) => {
   if (!originalUrl) {
     return res.status(404).send({ message: "URL not found" });
   }
-  res.redirect(originalUrl);
+  res.redirect(301, originalUrl);
 };
