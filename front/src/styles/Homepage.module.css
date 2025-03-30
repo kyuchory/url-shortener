@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap");
+
+.urlSearchSectionContainer {
+  width: 100%;
+  min-width: 1200px;
+  height: 600px;
+  background-image: url("../assets/beautiful-landscape-with-blue-sky.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+
+.urlContentWrapper {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.urlContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textWapper {
+  color: #fff;
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.textWapper > h1 {
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+.textWapper > p {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 5px;
+}
+
+.urlIntroductionContainer {
+  width: 1200px;
+  margin: 0 auto;
+  height: 700px;
+  display: flex;
+}

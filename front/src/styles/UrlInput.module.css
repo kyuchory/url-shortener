@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap");
+
+.urlInputWrapper {
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 4px 4px 4px 4px;
+  border-radius: 7px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: solid 1px #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.urlInput {
+  all: unset;
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 10px;
+
+  font-family: "Exo 2", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  text-align: left;
+  color: #fff;
+}
+
+.urlInput::placeholder {
+  color: #fff;
+}
+
+.transButton {
+  all: unset; /* 기본 스타일을 모두 제거 */
+  width: 40px;
+  height: 40px;
+  /* 버튼 스타일 새로 추가 */
+  border: 1px solid #fff;
+  background-color: rgba(240, 240, 240, 0.3);
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.transButton:hover {
+  border: 2px solid #fff; /* 호버 시 배경색 변화 */
+}

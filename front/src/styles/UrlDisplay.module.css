@@ -1,0 +1,38 @@
+.urlDisplayContainer {
+  margin-top: 10px;
+}
+
+.buttonStyle {
+  all: unset; /* 기본 스타일을 모두 제거 */
+  width: 40px;
+  height: 40px;
+  /* 버튼 스타일 새로 추가 */
+  border: 1px solid #fff;
+  background-color: rgba(240, 240, 240, 0.3);
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.buttonStyle:hover {
+  border: 2px solid #fff; /* 호버 시 배경색 변화 */
+}
+
+p {
+  color: #fff;
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.buttonsWrapper > p {
+  margin-right: 4px;
+}
