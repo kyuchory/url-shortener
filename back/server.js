@@ -10,9 +10,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: "*", // 모든 출처 허용
   })
 );
 
