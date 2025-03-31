@@ -5,6 +5,9 @@ import { clearShortenedUrl } from "../redux/urlSlice";
 import styles from "../styles/UrlDisplay.module.css";
 
 const UrlDisplay: React.FC = () => {
+  const serverUrl =
+    "https://port-0-url-shortener-m8wumeqa0a9a46b4.sel4.cloudtype.app";
+
   const dispatch = useDispatch();
 
   const shortenedUrl = useSelector(
@@ -13,9 +16,7 @@ const UrlDisplay: React.FC = () => {
 
   const handleCopy = () => {
     if (shortenedUrl) {
-      navigator.clipboard.writeText(
-        `http://localhost:3001/api/${shortenedUrl}`
-      );
+      navigator.clipboard.writeText(`${serverUrl}/api/${shortenedUrl}`);
       alert("copied");
     }
   };
@@ -23,7 +24,7 @@ const UrlDisplay: React.FC = () => {
   const handleRedirect = async () => {
     if (shortenedUrl) {
       try {
-        window.open(`http://localhost:3001/api/${shortenedUrl}`, "_blank");
+        window.open(`${serverUrl}/${shortenedUrl}`, "_blank");
       } catch (error) {
         alert("리디렉션 오류 발생");
       }
@@ -38,7 +39,9 @@ const UrlDisplay: React.FC = () => {
     <div className={styles.urlDisplayContainer}>
       {shortenedUrl ? (
         <div className={styles.buttonsWrapper}>
-          <p>단축된 URL: http://localhost:3001/api/{shortenedUrl}</p>
+          <p>
+            단축된 URL: {serverUrl}/api/{shortenedUrl}
+          </p>
           <button className={styles.buttonStyle} onClick={handleCopy}>
             복사
           </button>
