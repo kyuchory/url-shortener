@@ -13,8 +13,10 @@ interface IntroductionProps {
 const IntroductionCard: React.FC<IntroductionProps> = ({ introduction }) => {
   return (
     <div className={styles.cardWrapper}>
-      <img src={introduction.image} alt="소개 이미지" />
-      <h2>{introduction.title}</h2>
+      <div className={styles.titleWrapper}>
+        <img src={introduction.image} alt="소개 이미지" />
+        <h2>{introduction.title}</h2>
+      </div>
       <p>{introduction.description}</p>
     </div>
   );
