@@ -57,12 +57,13 @@ jobs:
             options:
               env: []
               ports: "3001"
-              install: cd back && npm install
-              start: cd back && node server.js
+              install: npm install
+              start: node server.js
               healthz: ""
               buildenv: []
             context:
               git:
-                url: git@github.com:${{ github.repository }}.git
-                ref: ${{ github.ref }}
+                url: https://github.com/kyuchory/url-shortener.git
+                branch: main
+                path: back
               preset: node
