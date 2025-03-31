@@ -20,7 +20,6 @@ exports.shortenUrl = (req, res) => {
 
 // URL을 리다이렉트하는 함수
 exports.redirectUrl = (req, res) => {
-  console.log("여기 옴");
   const { shortUrl } = req.params;
   const originalUrl = urlDatabase[shortUrl];
   console.log(urlDatabase);
@@ -29,5 +28,5 @@ exports.redirectUrl = (req, res) => {
   if (!originalUrl) {
     return res.status(404).send({ message: "URL not found" });
   }
-  res.redirect(301, originalUrl);
+  res.redirect(302, originalUrl);
 };
