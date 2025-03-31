@@ -31,10 +31,15 @@ jobs:
           cd back
           npm test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install Backend dependencies
+        run: |
+          cd back
+          npm install
       - name: Connect deploy key
         uses: cloudtype-github-actions/connect@v1
         with:
