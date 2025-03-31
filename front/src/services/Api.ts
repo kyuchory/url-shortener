@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3001/api",
+  baseURL:
+    "https://port-0-url-shortener-m8wumeqa0a9a46b4.sel4.cloudtype.app/api",
 });
 
 //url 단축 요청
