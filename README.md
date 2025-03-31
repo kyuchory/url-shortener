@@ -34,6 +34,7 @@ CI/CD 파이프라인을 만들어 백엔드, 프론트엔드를 빌드, 테스�
 ![React.js](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Axios](https://img.shields.io/badge/Axios-007ACC?style=for-the-badge&logo=axios&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-339933?style=for-the-badge&logo=redux&logoColor=white)
 
 ### Backend
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
