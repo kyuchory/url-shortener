@@ -57,8 +57,8 @@ jobs:
             options:
               env: []
               ports: "3001"
-              install: npm install
-              start: node server.js
+              install: cd back && npm install
+              start: cd back && node server.js
               healthz: ""
               buildenv: []
             context:
