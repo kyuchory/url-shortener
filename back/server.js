@@ -4,6 +4,8 @@ const cors = require("cors");
 
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 // 미들웨어 설정
 app.use(express.json());
 app.use(cors());
@@ -24,8 +26,11 @@ app.use(function (req, res, next) {
 app.use("/api", shortenerRoutes); // 모든 라우트를 `/api` 경로로 설정
 
 // 서버 실행
-app.listen(3001, () => {
-  console.log("Server is running on http://localhost:3001");
-});
+// 테스트 환경이 아닐 때만 서버 실행
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
 
 module.exports = app;
