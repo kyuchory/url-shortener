@@ -16,7 +16,7 @@ const UrlDisplay: React.FC = () => {
       navigator.clipboard.writeText(
         `http://localhost:3001/api/${shortenedUrl}`
       );
-      alert("복사됨");
+      alert("copied");
     }
   };
 
