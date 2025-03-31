@@ -16,11 +16,20 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Install Backend dependencies
+        run: |
+          cd back
+          npm install
+
+      # - name: Run tests
+      #   run: npm test
+      - name: Run Backend tests
+        run: |
+          cd back
+          npm test
   deploy:
     runs-on: ubuntu-latest
     steps:
