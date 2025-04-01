@@ -22,7 +22,7 @@ const UrlInput: React.FC = () => {
   // URL 변환 함수
   const handleSendUrl = async () => {
     const normalizedUrl = normalizeUrl(url);
-    if (isValidUrl(url)) {
+    if (isValidUrl(normalizedUrl)) {
       try {
         const data = await shortenUrl(normalizedUrl);
         dispatch(setShortenedUrl(`${data.shortUrl}`));
