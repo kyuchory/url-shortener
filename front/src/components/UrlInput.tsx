@@ -12,19 +12,21 @@ const UrlInput: React.FC = () => {
 
   const isValidUrl = (url: string) => {
     try {
-      new URL(url); // URL 객체로 변환 시 오류가 발생하면 유효하지 않은 URL
-      return true;
+      const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+      return regex.test(url);
     } catch (e) {
       return false;
     }
   };
 
+  // URL 변환 함수
   const handleSendUrl = async () => {
     const normalizedUrl = normalizeUrl(url);
-    if (isValidUrl(normalizedUrl)) {
+    if (isValidUrl(url)) {
       try {
         const data = await shortenUrl(normalizedUrl);
         dispatch(setShortenedUrl(`${data.shortUrl}`));
+        alert("변환 완료");
       } catch (error) {
         alert(error);
       }
@@ -34,10 +36,14 @@ const UrlInput: React.FC = () => {
   };
 
   const normalizeUrl = (url: string) => {
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      return `https://${url}`;
+    let normalizedUrl = url.trim();
+    if (
+      !normalizedUrl.startsWith("http://") &&
+      !normalizedUrl.startsWith("https://")
+    ) {
+      normalizedUrl = `https://${normalizedUrl}`;
     }
-    return url;
+    return normalizedUrl;
   };
 
   return (
