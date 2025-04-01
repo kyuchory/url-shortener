@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Provider } from "react-redux";
 import store from "../redux/store";
@@ -24,7 +25,9 @@ describe("UrlDisplay Component", () => {
 
     // shortenedUrl이 화면에 표시되는지 확인
     expect(
-      screen.getByText("단축된 URL: http://localhost:3001/api/46a5d4")
+      screen.getByText(
+        "단축된 URL: https://port-0-url-shortener-m8wumeqa0a9a46b4.sel4.cloudtype.app/api/46a5d4"
+      )
     ).toBeInTheDocument();
   });
 
@@ -42,7 +45,7 @@ describe("UrlDisplay Component", () => {
 
     // clipboard API가 호출됐는지 확인
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
-      "http://localhost:3001/api/46a5d4"
+      "https://port-0-url-shortener-m8wumeqa0a9a46b4.sel4.cloudtype.app/api/46a5d4"
     );
   });
 
@@ -60,7 +63,7 @@ describe("UrlDisplay Component", () => {
 
     // window.open이 호출됐는지 확인
     expect(window.open).toHaveBeenCalledWith(
-      "http://localhost:3001/api/46a5d4",
+      "https://port-0-url-shortener-m8wumeqa0a9a46b4.sel4.cloudtype.app/api/46a5d4",
       "_blank"
     );
   });
@@ -79,7 +82,9 @@ describe("UrlDisplay Component", () => {
 
     // shortenedUrl이 리셋된 후, 화면에서 사라졌는지 확인
     expect(
-      screen.queryByText("단축된 URL: http://localhost:3001/api/46a5d4")
+      screen.queryByText(
+        "단축된 URL: https://port-0-url-shortener-m8wumeqa0a9a46b4.sel4.cloudtype.app/api/46a5d4"
+      )
     ).toBeNull();
   });
 
