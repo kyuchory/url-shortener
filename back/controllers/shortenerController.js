@@ -2,6 +2,7 @@ const crypto = require("crypto");
 let urlDatabase = {};
 
 // URL 단축을 처리하는 함수
+//test
 exports.shortenUrl = (req, res) => {
   const { url } = req.body;
   if (!url) {
