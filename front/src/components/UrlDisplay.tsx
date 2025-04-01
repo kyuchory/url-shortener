@@ -24,7 +24,7 @@ const UrlDisplay: React.FC = () => {
   const handleRedirect = async () => {
     if (shortenedUrl) {
       try {
-        window.open(`${serverUrl}/${shortenedUrl}`, "_blank");
+        window.open(`${serverUrl}/api/${shortenedUrl}`, "_blank");
       } catch (error) {
         alert("리디렉션 오류 발생");
       }
