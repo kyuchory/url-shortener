@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "test/UriInput.test.tsx"]
+  "include": ["src", "src/test/UriInput.test.tsx"]
 }
