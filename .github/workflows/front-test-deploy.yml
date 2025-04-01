@@ -30,6 +30,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || success()
     steps:
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
