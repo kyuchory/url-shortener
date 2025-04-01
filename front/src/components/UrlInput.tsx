@@ -12,7 +12,7 @@ const UrlInput: React.FC = () => {
 
   const isValidUrl = (url: string) => {
     try {
-      const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+      const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*\.[a-zA-Z]{2,}$/i;
       return regex.test(url);
     } catch (e) {
       return false;
