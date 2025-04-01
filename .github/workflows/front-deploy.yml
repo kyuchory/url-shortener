@@ -25,7 +25,7 @@ jobs:
       - name: Run Front tests
         run: |
           cd front
-          npm test
+          npm test --ci
 
   deploy:
     needs: test
