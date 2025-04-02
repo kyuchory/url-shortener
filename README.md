@@ -61,8 +61,12 @@ CI/CD 파이프라인을 만들어 백엔드, 프론트엔드를 빌드, 테스�
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/9aed819c-f736-4038-bb63-05200a8cde1e" alt="메인페이지" width="500" height="220" /><br>
-      <strong>메인페이지</strong>
+      <img src="https://github.com/user-attachments/assets/412cce8e-2432-4d48-a4ab-6db5d6709841" alt="메인페이지" width="500" height="220" /><br>
+      <strong>변환 전</strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/1bf3b432-ad6b-4706-bba9-25e24ba5120e" alt="메인페이지" width="500" height="220" /><br>
+      <strong>변환 후</strong>
     </td>
   </tr>
 </table>
