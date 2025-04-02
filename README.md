@@ -49,6 +49,11 @@ CI/CD 파이프라인을 만들어 백엔드, 프론트엔드를 빌드, 테스�
 
 <br>
 
+## REST API 설계
+
+![Image](https://github.com/user-attachments/assets/c74dfb69-6f64-4b50-8ea6-984c2884b379)
+
+<br>
 
 ## 주요 기능
 
