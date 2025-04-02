@@ -6,10 +6,19 @@ import styles from "../styles/Homepage.module.css";
 import bgImg from "../assets/bgImg.png";
 import IntroductionList from "../components/IntroductionList";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const Homepage: React.FC = () => {
   return (
     <div>
+      <Helmet>
+        <title>홈페이지</title>
+        <meta name="description" content="url 단축 웹사이트의 홈페이지" />
+        <meta
+          name="keywords"
+          content="홈, 웹사이트, url, url shorten, url 단축"
+        />
+      </Helmet>
       <Header />
       <section className={styles.urlSearchSectionContainer}>
         <div className={styles.urlContentWrapper}>
@@ -25,7 +34,6 @@ const Homepage: React.FC = () => {
       <section className={styles.urlIntroductionContainer}>
         <IntroductionList />
       </section>
-
       <Footer />
     </div>
   );
