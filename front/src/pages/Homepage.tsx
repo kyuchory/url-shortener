@@ -5,6 +5,7 @@ import UrlInput from "../components/UrlInput";
 import styles from "../styles/Homepage.module.css";
 import bgImg from "../assets/bgImg.png";
 import IntroductionList from "../components/IntroductionList";
+import Footer from "../components/Footer";
 
 const Homepage: React.FC = () => {
   return (
@@ -24,6 +25,8 @@ const Homepage: React.FC = () => {
       <section className={styles.urlIntroductionContainer}>
         <IntroductionList />
       </section>
+
+      <Footer />
     </div>
   );
 };
