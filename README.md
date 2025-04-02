@@ -42,6 +42,8 @@ CI/CD 파이프라인을 만들어 백엔드, 프론트엔드를 빌드, 테스�
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 
+### Test
+![Jest](https://img.shields.io/badge/Jest-F05032?style=for-the-badge&logo=jest&logoColor=white)
 
 ### Tool
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
