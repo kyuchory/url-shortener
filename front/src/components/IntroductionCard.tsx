@@ -14,7 +14,7 @@ const IntroductionCard: React.FC<IntroductionProps> = ({ introduction }) => {
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.titleWrapper}>
-        <img src={introduction.image} alt="소개 이미지" />
+        <img src={introduction.image} alt="소개 이미지" loading="lazy" />
         <h2>{introduction.title}</h2>
       </div>
       <p>{introduction.description}</p>

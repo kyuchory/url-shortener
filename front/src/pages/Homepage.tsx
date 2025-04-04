@@ -11,14 +11,14 @@ import { Helmet } from "react-helmet";
 const Homepage: React.FC = () => {
   return (
     <div>
-      <Helmet>
-        <title>홈페이지</title>
+      {/* <Helmet>
+        <title>URL 단축</title>
         <meta name="description" content="url 단축 웹사이트의 홈페이지" />
         <meta
           name="keywords"
           content="홈, 웹사이트, url, url shorten, url 단축"
         />
-      </Helmet>
+      </Helmet> */}
       <Header />
       <section className={styles.urlSearchSectionContainer}>
         <div className={styles.urlContentWrapper}>
