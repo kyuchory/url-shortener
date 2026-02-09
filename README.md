@@ -120,7 +120,6 @@ BASE_URL=http://localhost:3001
 
 ### 코드 스타일
 
-- **TypeScript**: 엄격한 타입 체크 활성화
 - **ESLint**: 코드 품질 및 일관성 유지
 - **Prettier**: 코드 포맷팅 자동화
 - **컴포넌트**: 함수형 컴포넌트 및 React Hooks 사용
